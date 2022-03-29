@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+$very-light-gray: hsl(0, 0%, 95%);
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  min-height: 97.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+}
+
+.column {
+  max-width: 30rem;
+  height: 50rem;
+  padding: 5rem;
+
+  & img {
+    margin-bottom: 3rem;
+  }
+
+  & h1 {
+    color: $very-light-gray;
+    font-family: "Big Shoulders Display", sans-serif;
+    text-transform: uppercase;
+    font-size: 3.4rem;
+    margin-bottom: 3rem;
+  }
+
+  & p {
+    color: $transparent-white;
+    font-size: 1.425rem;
+    font-family: "Lexend Deca", sans-serif;
+    line-height: 2.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  & button {
+    padding: 1.4rem;
+    width: 14.6rem;
+    border-radius: 2.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid $very-light-gray;
+
+    font-family: "Lexend Deca", sans-serif;
+  }
+
+  &:first-child {
+    background-color: $bright-orange;
+    border-radius: 1rem 0 0 1rem;
+
+    & button {
+      color: $bright-orange;
+
+      &:hover {
+        background-color: transparent;
+        color: $very-light-gray;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: $dark-cyan;
+
+    & button {
+      color: $dark-cyan;
+
+      &:hover {
+        background-color: transparent;
+        color: $very-light-gray;
+      }
+    }
+  }
+
+  &:last-child {
+    background-color: $very-dark-cyan;
+    border-radius: 0 1rem 1rem 0;
+    flex: 1;
+
+    & button {
+      color: $very-dark-cyan;
+
+      &:hover {
+        background-color: transparent;
+        color: $very-light-gray;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cards {
+    margin: 2rem 0;
+    flex-direction: column;
+  }
+
+  .column {
+    &:first-child {
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 1rem 1rem;
+    }
+  }
+}

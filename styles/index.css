@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  min-height: 97.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 1rem;
+}
+
+.column {
+  max-width: 30rem;
+  height: 50rem;
+  padding: 5rem;
+}
+
+.column img {
+  margin-bottom: 3rem;
+}
+
+.column h1 {
+  color: #f2f2f2;
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  font-size: 3.4rem;
+  margin-bottom: 3rem;
+}
+
+.column p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.425rem;
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 2.5rem;
+  margin-bottom: 7.5rem;
+}
+
+.column button {
+  padding: 1.4rem;
+  width: 14.6rem;
+  border-radius: 2.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #f2f2f2;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.column:first-child {
+  background-color: #e38826;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.column:first-child button {
+  color: #e38826;
+}
+
+.column:first-child button:hover {
+  background-color: transparent;
+  color: #f2f2f2;
+}
+
+.column:nth-child(2) {
+  background-color: #006970;
+}
+
+.column:nth-child(2) button {
+  color: #006970;
+}
+
+.column:nth-child(2) button:hover {
+  background-color: transparent;
+  color: #f2f2f2;
+}
+
+.column:last-child {
+  background-color: #004241;
+  border-radius: 0 1rem 1rem 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.column:last-child button {
+  color: #004241;
+}
+
+.column:last-child button:hover {
+  background-color: transparent;
+  color: #f2f2f2;
+}
+
+@media screen and (max-width: 900px) {
+  .cards {
+    margin: 2rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .column:first-child {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .column:last-child {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+/*# sourceMappingURL=index.css.map */
